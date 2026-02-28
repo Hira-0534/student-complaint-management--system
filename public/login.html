@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SCMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card" id="loginCard">
+        <h2 id="loginTitle">Student Login</h2>
+        <p class="subtitle">Please enter your credentials</p>
+        
+        <div class="input-group">
+            <input id="username" placeholder="Enter Roll Number">
+            <input id="pass" placeholder="Password" type="password">
+        </div>
+
+        <button class="main-login-btn" onclick="login()">Sign In</button>
+        
+        <div class="forgot-link-wrapper">
+            <button class="link-btn-small" onclick="showResetForm()">Forgot Password?</button>
+        </div>
+        
+        <div class="switch-text" id="registerGroup">
+            Don't have an account? 
+            <button class="link-btn" id="regBtn" onclick="location='signup.html?role=Student'">Register Now</button>
+        </div>
+    </div>
+
+    <div class="card" id="resetCard" style="display: none;">
+        <button class="back-btn" onclick="showLoginForm()">← Back to Login</button>
+        <h3>Reset Password</h3>
+        <p class="subtitle">Enter your details to update password</p>
+        
+        <div class="input-group">
+            <input id="resetUser" placeholder="Roll Number / Username">
+            <input id="newPass" placeholder="Enter New Password" type="password">
+            <input id="confirmPass" placeholder="Confirm New Password" type="password">
+        </div>
+        
+        <button class="reset-submit-btn" onclick="submitReset()">Update Password</button>
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>

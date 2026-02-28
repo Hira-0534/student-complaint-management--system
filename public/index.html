@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCMS | Online Complaint Portal</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <section class="hero-container">
+            <div class="content-box">
+                <h2 class="main-title">Online <br><span class="orange-text">student Complaint management system</span></h2>
+                <p class="main-desc">
+                    Your voice matters to us! Whether it's about <b>Academics, Examination, or Campus Facilities</b>, 
+                    submit your grievances here for a swift and transparent resolution.
+                </p>
+                
+                <div class="action-area">
+                    <button class="btn-register" onclick="location.href='role.html'">Get Started</button>
+                    <button class="btn-how" onclick="toggleModal()">How it works</button>
+                </div>
+            </div>
+<div class="image-box">
+    <div class="image-card animated-float">
+        <img src="image.png" alt="Portal Illustration">
+    </div>
+</div>
+           
+        </section>
+    </div>
+
+    <div id="workingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-icon" onclick="toggleModal()">&times;</span>
+            <h2 style="color: #2c3e50;">How SCMS Works? 🛠️</h2>
+            <div class="steps-list">
+                <div class="step-item"><b>1. Login:</b> Choose your role.</div>
+                <div class="step-item"><b>2. Submit:</b> Fill the complaint form.</div>
+                <div class="step-item"><b>3. Track:</b> Monitor live updates.</div>
+                <div class="step-item"><b>4. Resolve:</b> Admin updates status.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            const modal = document.getElementById('workingModal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

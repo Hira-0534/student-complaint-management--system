@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Portal | SCMS</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo"> WELOCOME TO SCMS ADMIN PORTAL</div>
+        <div class="nav-menu">
+            <div class="nav-item active" id="menu-dash" onclick="showSection('dashboard', this)">📊 Dashboard</div>
+            <div class="nav-item" id="menu-view" onclick="showSection('viewAll', this)">📋 All Complaints</div>
+            <div class="nav-item" id="menu-update" onclick="showSection('updateStatus', this)">⚙️ Update Status</div>
+            
+            <div class="nav-item" onclick="toggleAccountMenu()" style="cursor:pointer;">👤 Account Settings ▾</div>
+            <div id="account-submenu" style="display: none; padding-left: 20px;">
+                <div class="nav-item sub-item" onclick="showSection('adminProfile', this)">📄 Admin Profile</div>
+                <div class="nav-item sub-item" onclick="showSection('settings', this)">🔒 Change Password</div>
+            </div>
+        </div>
+
+        <div class="user-footer">
+            <div id="adminSideName" style="font-weight: bold; color: white; font-size: 15px; margin-bottom: 5px;">Admin</div>
+            <div onclick="logout()" style="cursor:pointer; color: #fda4af; font-size: 13px;">🚪 Sign Out</div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="dashboard">
+                <div class="stats-container">
+                    <div class="stat-card blue">
+                        <div class="info"><h3 id="count-total">0</h3><p>Total Complaints</p></div>
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="stat-card green">
+                        <div class="info"><h3 id="count-users">0</h3><p>Total Students</p></div>
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-card orange">
+                        <div class="info"><h3 id="count-resolved">0</h3><p>Solved</p></div>
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section id="adminProfile" style="display: none;">
+                <div class="admin-card">
+                    <h2 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">👤 Admin Official Profile</h2>
+                    <div style="line-height: 2.5; margin-top: 20px;">
+                        <p><strong>Username:</strong> <span id="admin-user-display" style="color: #4f46e5; font-weight: bold;"></span></p>
+                        <p><strong>Role:</strong> <span class="status-badge Resolved">System Administrator</span></p>
+                        <p><strong>Access Level:</strong> Full Database Access</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="viewAll" style="display: none;">
+                <h2 style="margin-bottom: 20px;">📋 All Student Complaints</h2>
+                <div id="list"></div>
+            </section>
+
+            <section id="updateStatus" style="display: none;">
+                <div class="admin-card">
+                    <h2>⚙️ Update Complaint Status</h2>
+                    <input type="number" id="targetId" placeholder="Enter Complaint ID" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;">
+                    <select id="newStatus" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                    <button class="btn-primary" onclick="updateStatusManual()" style="width:100%; padding:12px; background:#4f46e5; color:white; border:none; border-radius:5px; cursor:pointer;">Update Now</button>
+                </div>
+            </section>
+
+            <section id="settings" style="display: none;">
+                <div class="admin-card">
+                    <h2>🔒 Secure Admin Password Update</h2>
+                    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Enter current and new password to update.</p>
+                    <input type="password" id="oldPassInput" placeholder="Current Password" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
+                    <input type="password" id="newPassInput" placeholder="New Password" style="width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc; border-radius:5px;">
+                    <input type="password" id="confirmPassInput" placeholder="Confirm New Password" style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:5px;">
+                    <button class="btn-primary" onclick="updateAdminPassword()" style="width:100%; padding:12px; background:#ef4444; color:white; border:none; border-radius:5px; cursor:pointer;">Update Admin Password</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/admin.js"></script>
+</body>
+</html>

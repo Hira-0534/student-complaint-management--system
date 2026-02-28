@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.main-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8%;
+    background: radial-gradient(circle at bottom left, #f1f5ff 0%, #ffffff 70%);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+/* Left Content Side */
+.content-box { flex: 1; }
+
+.main-title {
+    font-size: 48px; /* Decent and professional size */
+    font-weight: 800;
+    color: #1a2a4e;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+
+.orange-text { color: #ff5722; text-transform: capitalize; }
+
+.main-desc {
+    font-size: 17px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+/* Action Area */
+.action-area { display: flex; gap: 15px; }
+
+.btn-register {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 87, 34, 0.25);
+    transition: 0.3s ease;
+}
+
+.btn-register:hover { transform: translateY(-3px); background-color: #e64a19; }
+
+.btn-how {
+    background-color: #fff;
+    border: 2px solid #f1f5f9;
+    color: #1a2a4e;
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Right Image Side with Animation */
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 35px; /* Premium Radius */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.07);
+    border: 1px solid rgba(241, 245, 249, 0.8);
+}
+
+.image-card img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+}
+
+/* --- Action Area Buttons --- */
+.btn-register:hover { 
+    transform: translateY(-3px); 
+    background-color: #e64a19; 
+    box-shadow: 0 12px 25px rgba(255, 87, 34, 0.4);
+}
+
+/* HOW IT WORKS Button Hover Fix */
+.btn-how:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* --- Floating Animation Logic --- */
+.animated-float {
+    animation: floatingEffect 4s ease-in-out infinite;
+}
+
+@keyframes floatingEffect {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.02); } /* Picture upar jaye */
+    100% { transform: translateY(0px) scale(1); }
+}
+
+/* Image Card Hover (Animation Pause Logic) */
+.image-card {
+    transition: all 0.5s ease;
+}
+
+.image-card:hover {
+    animation-play-state: paused; /* Hover pe animation ruk jaye */
+    transform: scale(1.05) rotate(1deg); /* Halki si tilt premium look ke liye */
+    cursor: pointer;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    align-items: center; justify-content: center;
+}
+
+.modal-content {
+    background: #fff; padding: 40px;
+    border-radius: 20px; width: 90%; max-width: 450px;
+    position: relative;
+}
+
+.close-icon { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #cbd5e1; }
+.step-item {
+    margin-bottom: 12px; padding: 15px;
+    background: #f8fafc; border-left: 4px solid #ff5722;
+    border-radius: 8px;
+}

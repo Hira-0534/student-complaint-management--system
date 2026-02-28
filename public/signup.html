@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup | SCMS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join the Student Complaint Management System</p>
+            
+            <input id="username" placeholder="Enter Roll Number (e.g. 22-ARID-123)">
+            
+            <div style="text-align: left; margin-top: 10px;">
+                <label style="font-size: 12px; color: #666; margin-left: 5px;">Select Session:</label>
+                <select id="session" style="width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ddd;">
+                    <option value="2022-26">2022-2026</option>
+                    <option value="2023-27">2023-2027</option>
+                    <option value="2024-28">2024-2028</option>
+                    <option value="2025-29">2025-2029</option>
+                </select>
+            </div>
+
+            <input id="pass" placeholder="Create Password" type="password" style="margin-top: 15px;">
+            
+            <button onclick="signup()" style="margin-top: 20px;">Register Now</button>
+            
+            <div class="switch-text">
+                Already have an account? 
+                <button class="link-btn" onclick="location='login.html?role=Student'">Login here</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/signup.js"></script>
+</body>
+</html>

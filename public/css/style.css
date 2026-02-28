@@ -1,0 +1,131 @@
+
+body{font-family:Arial;background:#f5f7fb;margin:0}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:#fff;padding:20px;border-radius:10px;margin:15px 0;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+input,select,button{padding:10px;margin:5px;width:100%}
+button{background:#4f46e5;color:#fff;border:none;border-radius:6px;cursor:pointer}
+h1,h2{margin:0 0 10px}
+a{color:#4f46e5;text-decoration:none;margin-right:10px}
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: var(--text-main);
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* Modern Button Style */
+.btn-primary {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.4);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.5);
+}
+
+/* Role Selection Specific Styling */
+.role-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.role-card {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.role-card:hover {
+    border-color: var(--primary);
+    background: #f5f3ff;
+    color: var(--primary);
+}
+
+.role-icon {
+    font-size: 24px;
+    margin-right: 15px;
+}
+.forgot-pass-container {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: -10px; /* Input se thoda kareeb karne ke liye */
+}
+
+.link-btn.small {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.link-btn.small:hover {
+    color: #ff5722; /* Aapki theme wala orange */
+}
