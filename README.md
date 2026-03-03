@@ -84,9 +84,8 @@ npm start
 Visit in browser:
 
 http://localhost:3000
-Screenshots (Optional)
 
-Add screenshots of login, dashboard, complaint form etc.
+
 
 **⚙️ Future Enhancements*
 
